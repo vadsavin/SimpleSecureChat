@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleSecureChat", "SimpleSecureChat\SimpleSecureChat.csproj", "{B52D3074-0560-4086-9BEE-D82C0D3CADEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSecureChatAPI", "SimpleSecureChatAPI\SimpleSecureChatAPI\SimpleSecureChatAPI.csproj", "{94031686-AEA3-43E6-BC42-C94A4932CA6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleSecureChatAPI", "SimpleSecureChatAPI\SimpleSecureChatAPI\SimpleSecureChatAPI.csproj", "{94031686-AEA3-43E6-BC42-C94A4932CA6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSecureChatClient", "SimpleSecureChatClient\SimpleSecureChatClient.csproj", "{20D2D99C-E84A-44AC-8D32-477529903735}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{94031686-AEA3-43E6-BC42-C94A4932CA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94031686-AEA3-43E6-BC42-C94A4932CA6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94031686-AEA3-43E6-BC42-C94A4932CA6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20D2D99C-E84A-44AC-8D32-477529903735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20D2D99C-E84A-44AC-8D32-477529903735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20D2D99C-E84A-44AC-8D32-477529903735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20D2D99C-E84A-44AC-8D32-477529903735}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,8 +8,11 @@ using System.Threading.Tasks;
 
 namespace SimpleSecureChatAPI.Packets
 {
-    public class ChatConnetionPacket<TChatConnetionPacket> : JsonSerializable<TChatConnetionPacket> where TChatConnetionPacket : ChatConnetionPacket<TChatConnetionPacket>
+    public class ChatConnetionPacket : Packet<ChatConnetionPacket>
     {
         public ConnectionInfo ActionType { get; set; }
+        public string ChatHash { get; set; }
+        public const string Route = "connect";
+        public const uint Id = 0x01;
     }
 }

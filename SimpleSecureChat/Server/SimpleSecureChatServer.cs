@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SimpleSecureChatAPI.Packets;
 using System;
 
 namespace SimpleSecureChat.Server
@@ -42,5 +43,10 @@ namespace SimpleSecureChat.Server
 				endpoints.MapControllers();
 			});
 		}
+
+		public void GetOrCreateChat()
+        {
+
+        }
 	}
 }

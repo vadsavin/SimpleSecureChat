@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using SimpleSecureChat.Server;
+using SimpleSecureChatAPI.Packets;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +12,29 @@ using System.Threading.Tasks;
 namespace SimpleSecureChat.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class SimpleSecureChatController : ControllerBase
     {
-        private readonly ILogger<WeatherForecastController> _logger;
+        public SimpleSecureChatServer Server { get; private set; }
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public SimpleSecureChatController(SimpleSecureChatServer server)
         {
-            _logger = logger;
+            Server = server;
+        }
+
+        [Route(ChatConnetionPacket.Route)]
+        [HttpPost]
+        public void ChatConnectionHandler()
+        {
+            var json = ReadBody();
+            ChatConnetionPacket packet = ChatConnetionPacket.Deserialize(json);
+        }
+
+        [Route(ChatMessagePacket.Route)]
+        [HttpPost]
+        public void ChatMessageHandler()
+        {
+            var json = ReadBody();
+            ChatMessagePacket packet = ChatMessagePacket.Deserialize(json);
         }
 
         private IPEndPoint GetRemoteEndpoint()
